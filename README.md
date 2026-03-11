@@ -27,15 +27,11 @@ Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 ### Install from ComfyUI Manager Extensions
 Search 'ComfyUI-AudioX' in ComfyUI Manager Extensions.
 
-> If `k-diffusion` is missing, install it manually:
-> ```bash
-> pip install k-diffusion==0.1.1.post1
-> pip install "numpy>=2.0.0"   # restore after clip-anytorch downgrades it
-> ```
+All dependencies will be installed automatically. If you encounter numpy conflicts after installation, see the troubleshooting section below.
 
 ### Install manually:
 
-### 1 Clone the node
+### 1 — Clone the node
 
 ```bash
 cd ComfyUI/custom_nodes
@@ -49,13 +45,8 @@ cd ComfyUI-AudioX
 pip install -r requirements.txt
 ```
 
-> **Note:** `torch`, `torchvision`, `torchaudio`, and `k-diffusion` are **not** in
-> `requirements.txt` because ComfyUI already manages them. If `k-diffusion` is
-> missing, install it manually:
-> ```bash
-> pip install k-diffusion==0.1.1.post1
-> pip install "numpy>=2.0.0"   # restore after clip-anytorch downgrades it
-> ```
+> **Note:** `torch`, `torchvision`, and `torchaudio` are **not** in
+> `requirements.txt` because ComfyUI already manages them.
 
 ### 3 — Download models
 
@@ -139,6 +130,29 @@ Import it via **ComfyUI → Load → select the JSON file**.
 - CLIP `UNEXPECTED` key warnings in the log are harmless — they appear because
   `CLIPVisionModelWithProjection` loads only the vision head from a full CLIP checkpoint.
 - **Tested on Python 3.12 and CU128**.
+
+---
+
+## Troubleshooting
+
+### Dependency Conflicts
+
+If you encounter dependency conflicts after installation:
+
+**NumPy version conflict** (e.g., `dctorch requires numpy<2.0.0` or `opencv-python requires numpy>=2.0`):
+```bash
+# Upgrade numpy to latest version
+pip install "numpy>=2.0.0"
+```
+This is safe — most packages work fine with numpy 2.x even if they specify older version constraints.
+
+**Protobuf conflict** (`descript-audiotools requires protobuf<3.20`):
+```bash
+# Downgrade protobuf if needed
+pip install "protobuf<3.20,>=3.9.2"
+```
+
+These dependency warnings from pip are usually safe to ignore if the nodes are working correctly.
 
 ---
 

@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-audiox"
 description = "ComfyUI custom nodes for AudioX/AudioX-MAF video-to-audio generation"
-version = "1.0.3"
+version = "1.0.4"
 license = { file = "LICENSE" }
 readme = "README.md"
 
@@ -19,6 +19,7 @@ dependencies = [
     "descript-audio-codec>=1.0.0",
     "einops-exts>=0.0.4",
     "vector_quantize_pytorch>=1.0.0",
+    "k-diffusion==0.1.1.post1",
 ]
 
 keywords = [

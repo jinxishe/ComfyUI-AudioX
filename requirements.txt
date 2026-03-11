@@ -4,12 +4,6 @@
 # torch / torchvision / torchaudio are NOT listed here because ComfyUI
 # already installs a specific CUDA build. Re-installing them via pip
 # would downgrade or break the existing build.
-#
-# k-diffusion is NOT listed because ComfyUI typically ships it, and
-# re-installing it pulls in clip-anytorch which downgrades numpy.
-# If k-diffusion is missing, install it manually:
-#   pip install k-diffusion==0.1.1.post1
-#   pip install "numpy>=2.0.0"   # restore after clip-anytorch downgrades it
 
 # Core
 einops>=0.7.0
@@ -30,3 +24,11 @@ omegaconf>=2.3.0
 descript-audio-codec>=1.0.0
 einops-exts>=0.0.4
 vector_quantize_pytorch>=1.0.0
+
+# Diffusion sampler
+k-diffusion==0.1.1.post1
+
+# Note: k-diffusion may downgrade numpy. If you encounter conflicts with 
+# opencv-python or other packages requiring numpy>=2.0, run:
+#   pip install "numpy>=2.0.0"
+# This is safe to use even if dctorch complains about numpy version.
