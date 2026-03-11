@@ -24,7 +24,18 @@ Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 
 ## Installation
 
-### 1 — Clone the node
+### Install from ComfyUI Manager Extensions
+Search 'ComfyUI-AudioX' in ComfyUI Manager Extensions.
+
+> If `k-diffusion` is missing, install it manually:
+> ```bash
+> pip install k-diffusion==0.1.1.post1
+> pip install "numpy>=2.0.0"   # restore after clip-anytorch downgrades it
+> ```
+
+### Install manually:
+
+### 1 Clone the node
 
 ```bash
 cd ComfyUI/custom_nodes
@@ -127,6 +138,7 @@ Import it via **ComfyUI → Load → select the JSON file**.
   to assemble frames into a temporary MP4.
 - CLIP `UNEXPECTED` key warnings in the log are harmless — they appear because
   `CLIPVisionModelWithProjection` loads only the vision head from a full CLIP checkpoint.
+- **Tested on Python 3.12 and CU128**.
 
 ---
 

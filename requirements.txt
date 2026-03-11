@@ -25,3 +25,8 @@ transformers>=4.40.0
 # Synchformer (AudioX-MAF / AudioX-MAF-MMDiT only)
 timm>=0.9.0
 omegaconf>=2.3.0
+
+# Audio codec and quantization
+descript-audio-codec>=1.0.0
+einops-exts>=0.0.5
+vector_quantize_pytorch>=1.0.0
