@@ -2,7 +2,7 @@
 
 ComfyUI custom nodes for **AudioX** — generate sound effects and background music from video, powered by [HKUSTAudio/AudioX](https://github.com/ZeyueT/AudioX).
 
-Core AudioX source is embedded. **No `pip install audiox` required.**
+Great thanks to [lum3on/ComfyUI-StableAudioX](https://github.com/lum3on/ComfyUI-StableAudioX).
 
 ---
 
@@ -19,8 +19,8 @@ Core AudioX source is embedded. **No `pip install audiox` required.**
 | Model | Notes |
 |-------|-------|
 | [AudioX-MAF](https://huggingface.co/HKUSTAudio/AudioX-MAF) | **Recommended** — best quality, uses Synchformer visual encoder |
-| [AudioX-MAF-MMDiT](https://huggingface.co/HKUSTAudio/AudioX-MAF-MMDiT) | MMDiT variant |
-| [AudioX](https://huggingface.co/HKUSTAudio/AudioX) | Base model, no Synchformer |
+| [AudioX-MAF-MMDiT](https://huggingface.co/HKUSTAudio/AudioX-MAF-MMDiT) | MMDiT variant (in progress, not tested yet) | 
+| [AudioX](https://huggingface.co/HKUSTAudio/AudioX) | Base model, no Synchformer (in progress, not tested yet)| 
 
 ## Installation
 
@@ -28,7 +28,7 @@ Core AudioX source is embedded. **No `pip install audiox` required.**
 
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/YOUR_USERNAME/ComfyUI-AudioX.git
+git clone https://github.com/jinxishe/ComfyUI-AudioX.git
 ```
 
 ### 2 — Install dependencies
@@ -101,7 +101,7 @@ The workflow contains two parallel paths:
 
 Import it via **ComfyUI → Load → select the JSON file**.
 
-![sample workflow](examples/workflow_preview.png)
+![sample workflow](examples/comfyui-audiox-sample-workflow.png)
 
 ---
 

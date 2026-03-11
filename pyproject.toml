@@ -37,12 +37,12 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage   = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX"
-Repository = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX"
-Issues     = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX/issues"
+Homepage   = "https://github.com/jinxishe/ComfyUI-AudioX"
+Repository = "https://github.com/jinxishe/ComfyUI-AudioX"
+Issues     = "https://github.com/jinxishe/ComfyUI-AudioX/issues"
 
 [tool.comfy]
-PublisherId    = "YOUR_PUBLISHER_ID"
+PublisherId    = "aiimagestudio"
 DisplayName    = "ComfyUI-AudioX"
 Icon           = ""
 Tags           = ["audio", "video", "music", "sound-effects", "audiox"]
