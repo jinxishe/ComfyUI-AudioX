@@ -2,7 +2,7 @@
 
 ComfyUI custom nodes for **AudioX** — generate sound effects and background music from video, powered by [HKUSTAudio/AudioX](https://github.com/ZeyueT/AudioX).
 
-Great thanks to [lum3on/ComfyUI-StableAudioX](https://github.com/lum3on/ComfyUI-StableAudioX).
+Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 
 ---
 
@@ -134,6 +134,7 @@ Import it via **ComfyUI → Load → select the JSON file**.
 
 - Original model: [HKUSTAudio/AudioX](https://github.com/ZeyueT/AudioX) — HKUST Audio Lab
 - Sampling: [k-diffusion](https://github.com/crowsonkb/k-diffusion) — Katherine Crowson
+- Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 
 ## License
 
