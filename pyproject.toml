@@ -1,0 +1,48 @@
+[project]
+name = "comfyui-audiox"
+description = "ComfyUI custom nodes for AudioX / AudioX-MAF video-to-audio generation"
+version = "1.0.0"
+license = { file = "LICENSE" }
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+# Runtime dependencies (torch stack excluded — ComfyUI manages it)
+dependencies = [
+    "einops>=0.7.0",
+    "safetensors>=0.4.0",
+    "soundfile>=0.12.1",
+    "decord>=0.6.0",
+    "transformers>=4.40.0",
+    "timm>=0.9.0",
+    "omegaconf>=2.3.0",
+]
+
+keywords = [
+    "comfyui",
+    "audio",
+    "video-to-audio",
+    "music-generation",
+    "sound-effects",
+    "audiox",
+]
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage   = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX"
+Repository = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX"
+Issues     = "https://github.com/YOUR_USERNAME/ComfyUI-AudioX/issues"
+
+[tool.comfy]
+PublisherId    = "YOUR_PUBLISHER_ID"
+DisplayName    = "ComfyUI-AudioX"
+Icon           = ""
+Tags           = ["audio", "video", "music", "sound-effects", "audiox"]
