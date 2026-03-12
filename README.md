@@ -6,6 +6,25 @@ Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 
 ---
 
+## Sample Workflow
+
+See [`examples/AudioX_sample_workflow.json`](examples/AudioX_sample_workflow.json).
+
+The workflow contains two parallel paths:
+
+```
+[ComfyUI Load Video] ──► VIDEO ──► [AudioX Video to Audio] ──► AUDIO ──► [Preview Audio]
+
+[VHS Load Video] ──► IMAGE ──► [AudioX Images to Audio (VHS)] ──► AUDIO ──► [Preview Audio]
+                  fps ↗ (from VHS Video Info)
+```
+
+Import it via **ComfyUI → Load → select the JSON file, or find it in ComfyUI's template browser.**
+
+![sample workflow](examples/comfyui-audiox-sample-workflow.png)
+
+---
+
 ## Nodes
 
 | Node | Input | Output | Description |
@@ -22,7 +41,9 @@ Great thanks to [ZeyueT/AudioX](https://github.com/ZeyueT/AudioX).
 | [AudioX-MAF-MMDiT](https://huggingface.co/HKUSTAudio/AudioX-MAF-MMDiT) | MMDiT variant (in progress, not tested yet) | 
 | [AudioX](https://huggingface.co/HKUSTAudio/AudioX) | Base model, no Synchformer (in progress, not tested yet)| 
 
-## Installation
+---
+
+## Tasks
 
 ### Install from ComfyUI Manager Extensions
 Search 'ComfyUI-AudioX' in ComfyUI Manager Extensions.
@@ -85,25 +106,6 @@ Restart ComfyUI after downloading.
 | V2M — Video to Music | Generate background music matching the video | No |
 | TV2A — Text + Video to Audio | Guide sound effects with a text prompt | **Yes** |
 | TV2M — Text + Video to Music | Guide music generation with a text prompt | **Yes** |
-
----
-
-## Sample Workflow
-
-See [`examples/AudioX_sample_workflow.json`](examples/AudioX_sample_workflow.json).
-
-The workflow contains two parallel paths:
-
-```
-[ComfyUI Load Video] ──► VIDEO ──► [AudioX Video to Audio] ──► AUDIO ──► [Preview Audio]
-
-[VHS Load Video] ──► IMAGE ──► [AudioX Images to Audio (VHS)] ──► AUDIO ──► [Preview Audio]
-                  fps ↗ (from VHS Video Info)
-```
-
-Import it via **ComfyUI → Load → select the JSON file**.
-
-![sample workflow](examples/comfyui-audiox-sample-workflow.png)
 
 ---
 
